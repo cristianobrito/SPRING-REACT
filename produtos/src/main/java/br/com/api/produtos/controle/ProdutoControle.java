@@ -20,6 +20,7 @@ public class ProdutoControle {
     @Autowired
     private ProdutoServico ps;
 
+    // {PEGA O CODIGO}
     @DeleteMapping("/remover/{codigo}")
     public ResponseEntity<RespostaModelo> remover(@PathVariable long codigo){
             return ps.remover(codigo);
