@@ -2,6 +2,7 @@ package br.com.api.produtos.controle;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +16,7 @@ import br.com.api.produtos.modelo.RespostaModelo;
 import br.com.api.produtos.servico.ProdutoServico;
 
 @RestController
+@CrossOrigin(origins = "*")            // (origins = "http://localhost:3000") pode ser a url completa o * libera todas as permissões
 public class ProdutoControle {
 
     @Autowired
